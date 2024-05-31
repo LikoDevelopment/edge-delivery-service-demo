@@ -18,6 +18,7 @@
   --light-color: #eee;
   --dark-color: #ccc;
   --text-color: black;
+  --secondardy-background-color: #EFE5D9;
 
   /* fonts */
   --body-font-family: 'Work Sans', roboto-fallback;
@@ -220,7 +221,22 @@ main .section {
 }
 
 /* section metadata */
-main .section.light,
-main .section.highlight {
-  background-color: var(--light-color);
+main > .section {
+  &.light,
+  &.highlight {
+    background-color: var(--light-color);
+  }
+
+  &.dark {
+    background-color: var(--link-color);
+    color: var(--light-color)
+  }
+
+  &.brown {
+    background-color: var(--secondardy-background-color);
+  }
+
+  &.centered {
+    text-align: center;
+  }
 }
